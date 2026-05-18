@@ -1,76 +1,79 @@
 ---
-title: Giao diện Hextra
+title: Hướng dẫn triển khai Northflank
 layout: hextra-home
 ---
 
 {{< hextra/hero-badge >}}
   <div class="hx:w-2 hx:h-2 hx:rounded-full hx:bg-primary-400"></div>
-  <span>Miễn phí, mã nguồn mở</span>
+  <span>Chuyên trang Northflank</span>
   {{< icon name="arrow-circle-right" attributes="height=14" >}}
 {{< /hextra/hero-badge >}}
 
 <div class="hx:mt-6 hx:mb-6">
 {{< hextra/hero-headline >}}
-  Xây dựng website hiện đại&nbsp;<br class="hx:sm:block hx:hidden" />với Markdown và Hugo
+  Triển khai container với Northflank&nbsp;<br class="hx:sm:block hx:hidden" />từ project đầu tiên tới service đang chạy
 {{< /hextra/hero-headline >}}
 </div>
 
 <div class="hx:mb-12">
 {{< hextra/hero-subtitle >}}
-  Giao diện Hugo nhanh, đầy đủ tính năng&nbsp;<br class="hx:sm:block hx:hidden" />để tạo các website tĩnh đẹp mắt
+  Landing page tập trung cho quy trình Northflank:&nbsp;<br class="hx:sm:block hx:hidden" />khởi tạo team, chọn region, deploy service và vận hành runtime
 {{< /hextra/hero-subtitle >}}
 </div>
 
 <div class="hx:mb-6">
-{{< hextra/hero-button text="Bắt đầu" link="docs" >}}
+{{< hextra/hero-button text="Bắt đầu với tổng quan nền tảng" link="platform-overview" >}}
 </div>
 
 <div class="hx:mt-6"></div>
 
 {{< hextra/feature-grid >}}
   {{< hextra/feature-card
-    title="Nhanh và đầy đủ tính năng"
-    subtitle="Đơn giản, dễ dùng nhưng vẫn mạnh mẽ và giàu tính năng."
+    title="Onboarding mượt"
+    subtitle="Bắt đầu với tạo tài khoản Northflank, xác nhận thông tin team và đi tiếp sang bước tạo project mà không phải đoán bước kế tiếp."
     class="hx:aspect-auto hx:md:aspect-[1.1/1] hx:max-md:min-h-[340px]"
-    image="images/hextra-doc.webp"
-    imageClass="hx:top-[40%] hx:left-[24px] hx:w-[180%] hx:sm:w-[110%] hx:dark:opacity-80"
-    style="background: radial-gradient(ellipse at 50% 80%,rgba(194,97,254,0.15),hsla(0,0%,100%,0));"
+    image="images/northflank-onboarding.png"
+    imageClass="hx:top-[38%] hx:left-[24px] hx:w-[185%] hx:sm:w-[118%] hx:dark:opacity-90"
+    style="background: radial-gradient(ellipse at 50% 80%,rgba(59,130,246,0.18),hsla(0,0%,100%,0));"
   >}}
   {{< hextra/feature-card
-    title="Chỉ cần Markdown là đủ"
-    subtitle="Soạn nội dung chỉ với Markdown. Bổ sung sức mạnh bằng các Shortcode."
-    class="hx:aspect-auto hx:md:aspect-[1.1/1] hx:max-lg:min-h-[340px]"
-    image="images/hextra-markdown.webp"
-    imageClass="hx:top-[40%] hx:left-[36px] hx:w-[180%] hx:sm:w-[110%] hx:dark:opacity-80"
-    style="background: radial-gradient(ellipse at 50% 80%,rgba(142,53,74,0.15),hsla(0,0%,100%,0));"
-  >}}
-  {{< hextra/feature-card
-    title="Tìm kiếm toàn văn"
-    subtitle="Tích hợp sẵn tìm kiếm toàn văn với FlexSearch, không cần cấu hình thêm."
+    title="Dashboard theo project"
+    subtitle="Northflank gom service, database, job và networking theo project để từng workload được cô lập và dễ quản lý hơn."
     class="hx:aspect-auto hx:md:aspect-[1.1/1] hx:max-md:min-h-[340px]"
-    image="images/hextra-search.webp"
-    imageClass="hx:top-[40%] hx:left-[36px] hx:w-[110%] hx:sm:w-[110%] hx:dark:opacity-80"
-    style="background: radial-gradient(ellipse at 50% 80%,rgba(221,210,59,0.15),hsla(0,0%,100%,0));"
+    image="images/northflank-dashboard.png"
+    imageClass="hx:top-[41%] hx:left-[18px] hx:w-[165%] hx:sm:w-[110%] hx:dark:opacity-90"
+    style="background: radial-gradient(ellipse at 50% 80%,rgba(99,102,241,0.18),hsla(0,0%,100%,0));"
   >}}
   {{< hextra/feature-card
-    title="Nhẹ như lông vũ"
-    subtitle="Không cần dependency hay Node.js để dùng Hextra. Được vận hành bởi Hugo, một trong *những* trình tạo website tĩnh nhanh nhất, build site chỉ trong vài giây với một binary duy nhất."
+    title="Mục tiêu triển khai linh hoạt"
+    subtitle="Chọn Northflank Cloud để đi nhanh theo hướng managed hoặc Bring Your Own Cloud khi cần kiểm soát hạ tầng chặt hơn."
+    class="hx:aspect-auto hx:md:aspect-[1.1/1] hx:max-md:min-h-[340px]"
+    image="images/northflank-region.png"
+    imageClass="hx:top-[38%] hx:left-[24px] hx:w-[180%] hx:sm:w-[112%] hx:dark:opacity-90"
+    style="background: radial-gradient(ellipse at 50% 80%,rgba(14,165,233,0.17),hsla(0,0%,100%,0));"
   >}}
   {{< hextra/feature-card
-    title="Responsive kèm Dark Mode"
-    subtitle="Hiển thị đẹp trên nhiều kích thước màn hình. Tích hợp sẵn dark mode và tự động chuyển theo thiết lập hệ thống của người dùng."
+    title="Danh mục tài nguyên đầy đủ"
+    subtitle="Từ build service, deployment service tới job, volume, add-on và secret group, nền tảng cung cấp trọn bộ runtime cho ứng dụng."
+    class="hx:aspect-auto hx:md:aspect-[1.1/1] hx:max-md:min-h-[340px]"
+    image="images/northflank-resource-menu.png"
+    imageClass="hx:top-[40%] hx:left-[20px] hx:w-[178%] hx:sm:w-[114%] hx:dark:opacity-90"
+    style="background: radial-gradient(ellipse at 50% 80%,rgba(168,85,247,0.16),hsla(0,0%,100%,0));"
   >}}
   {{< hextra/feature-card
-    title="Build và host miễn phí"
-    subtitle="Build bằng GitHub Actions và host miễn phí trên GitHub Pages. Ngoài ra có thể triển khai trên bất kỳ dịch vụ static hosting nào."
+    title="Deploy image ngoài thật nhanh"
+    subtitle="Trỏ Northflank tới image trên Docker Hub, cấu hình CPU, RAM, port, biến môi trường và health behavior rồi khởi chạy service."
+    class="hx:aspect-auto hx:md:aspect-[1.1/1] hx:max-md:min-h-[340px]"
+    image="images/northflank-deploy-service.png"
+    imageClass="hx:top-[38%] hx:left-[18px] hx:w-[162%] hx:sm:w-[108%] hx:dark:opacity-90"
+    style="background: radial-gradient(ellipse at 50% 80%,rgba(6,182,212,0.18),hsla(0,0%,100%,0));"
   >}}
   {{< hextra/feature-card
-    title="Đa ngôn ngữ thật dễ dàng"
-    subtitle="Tạo trang đa ngôn ngữ chỉ bằng cách thêm hậu tố locale vào file Markdown. Việc bổ sung i18n cho website rất trực quan."
-  >}}
-  {{< hextra/feature-card
-    title="Và còn nhiều hơn nữa..."
-    icon="sparkles"
-    subtitle="Syntax highlighting / Mục lục / SEO / RSS / LaTeX / Mermaid / Tùy biến / và nhiều hơn nữa..."
+    title="Vận hành sau khi lên sóng"
+    subtitle="Theo dõi deployment, mở log, xem metric, override lệnh và thao tác runtime ngay trong một màn hình tổng quan service."
+    class="hx:aspect-auto hx:md:aspect-[1.1/1] hx:max-md:min-h-[340px]"
+    image="images/northflank-runtime.png"
+    imageClass="hx:top-[40%] hx:left-[18px] hx:w-[160%] hx:sm:w-[106%] hx:dark:opacity-90"
+    style="background: radial-gradient(ellipse at 50% 80%,rgba(59,130,246,0.16),hsla(0,0%,100%,0));"
   >}}
 {{< /hextra/feature-grid >}}

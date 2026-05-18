@@ -1,6 +1,6 @@
 # Hugo configuration file
 baseURL: "/"
-title: "Your Site Name"
+title: "Northflank Infosite"
 
 enableRobotsTXT: true
 enableGitInfo: true
@@ -16,12 +16,12 @@ languages:
     label: English
     locale: en
     weight: 1
-    title: Your Site Name
+    title: Northflank Infosite
     params:
       banner:
         key: starter-template
         message: |
-          Starter template ? replace this sample content with your own.
+          Northflank deployment notes, screenshots, and practical walkthroughs.
 
 module:
   imports:
@@ -44,26 +44,34 @@ enableInlineShortcodes: true
 
 menu:
   main:
-    - identifier: blog
-      name: Blog
-      pageRef: /blog
+    - identifier: platform-overview
+      name: Platform
+      pageRef: /platform-overview
       weight: 1
-    - identifier: about
-      name: About
-      pageRef: /about
+    - identifier: team-and-project-setup
+      name: Setup
+      pageRef: /team-and-project-setup
       weight: 2
-    - name: Search
+    - identifier: deploy-container-service
+      name: Deploy
+      pageRef: /deploy-container-service
       weight: 3
+    - identifier: operate-and-observe
+      name: Operate
+      pageRef: /operate-and-observe
+      weight: 4
+    - name: Search
+      weight: 5
       params:
         type: search
     - name: GitHub
-      weight: 4
+      weight: 6
       url: "https://github.com/your-name/your-repo"
       params:
         icon: github
 
 params:
-  description: A clean Hextra starter template for blogs, notes, and lightweight documentation.
+  description: A Northflank-focused infosite with deployment walkthroughs, platform notes, and screenshot-backed guides.
   externalLinkDecoration: true
 
   navbar:

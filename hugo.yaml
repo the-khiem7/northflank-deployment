@@ -1,0 +1,128 @@
+# Hugo configuration file
+baseURL: "/"
+title: "Your Site Name"
+
+enableRobotsTXT: true
+enableGitInfo: true
+
+outputs:
+  home: [html, llms]
+  page: [html, markdown]
+  section: [html, rss, markdown]
+
+defaultContentLanguage: en
+languages:
+  en:
+    label: English
+    locale: en
+    weight: 1
+    title: Your Site Name
+    params:
+      banner:
+        key: starter-template
+        message: |
+          Starter template ? replace this sample content with your own.
+
+module:
+  imports:
+    - path: github.com/imfing/hextra
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+    extensions:
+      passthrough:
+        delimiters:
+          block: [['\[', '\]'], ['$$', '$$']]
+          inline: [['\(', '\)']]
+        enable: true
+  highlight:
+    noClasses: false
+
+enableInlineShortcodes: true
+
+menu:
+  main:
+    - identifier: blog
+      name: Blog
+      pageRef: /blog
+      weight: 1
+    - identifier: about
+      name: About
+      pageRef: /about
+      weight: 2
+    - name: Search
+      weight: 3
+      params:
+        type: search
+    - name: GitHub
+      weight: 4
+      url: "https://github.com/your-name/your-repo"
+      params:
+        icon: github
+
+params:
+  description: A clean Hextra starter template for blogs, notes, and lightweight documentation.
+  externalLinkDecoration: true
+
+  navbar:
+    displayTitle: true
+    displayLogo: true
+    logo:
+      path: images/logo.svg
+      dark: images/logo-dark.svg
+    width: wide
+
+  theme:
+    default: system
+    displayToggle: true
+
+  footer:
+    enable: true
+    displayCopyright: true
+    displayPoweredBy: false
+    width: normal
+
+  displayUpdatedDate: true
+  dateFormat: "January 2, 2006"
+  displayUpdatedAuthor: false
+
+  search:
+    enable: true
+    type: flexsearch
+    flexsearch:
+      index: content
+      tokenize: forward
+
+  editURL:
+    enable: false
+
+  blog:
+    list:
+      displayTags: true
+      sortBy: date
+      sortOrder: desc
+      pagerSize: 20
+    article:
+      displayPagination: true
+
+  toc:
+    displayTags: true
+
+  highlight:
+    copy:
+      enable: true
+      display: hover
+
+  page:
+    width: normal
+    contextMenu:
+      enable: false
+
+  imageZoom:
+    enable: true
+
+  comments:
+    enable: false
+    type: giscus
